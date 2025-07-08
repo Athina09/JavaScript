@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bulb Toggle</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-color:pink;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .bulb-box {
+      padding: 20px;
+      border: 3px solid #ccc;
+      border-radius: 20px;
+      background-color:white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      display: inline-block;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 8px;
+    }
+
+    button:hover {
+      background-color: #005f6a;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="bulb-box">
+      <img id="bulb" src="https://www.w3schools.com/js/pic_bulboff.gif" alt="Bulb" />
+      <br />
+      <button onclick="toggleBulb()">Toggle Bulb</button>
+    </div>
+  </div>
+
+  <script>
+    function toggleBulb() {
+      const bulb = document.getElementById('bulb');
+      if (bulb.src.includes("pic_bulboff")) {
+        bulb.src = "https://www.w3schools.com/js/pic_bulbon.gif";
+      } else {
+        bulb.src = "https://www.w3schools.com/js/pic_bulboff.gif";
+      }
+    }
+  </script>
+</body>
+</html>
