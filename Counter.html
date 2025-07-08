@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    <div class="flex justify-center items-center h-screen">
+        <div class="flex flex-col  items-center gap-2 ">
+            <h1 class="text-4xl font-bold">Counter</h1>
+            <p class="text-[48px] font-bold" id="count">O</p>
+            <div class="flex gap-2">
+
+                <button class="border-2 border-black py-2 px-6 rounded-lg" id="des">DECREASE</button>
+                <button class="border-2 border-black py-2 px-6 rounded-lg" id="res">RESET</button>
+                <button class="border-2 border-black py-2 px-6 rounded-lg" id="inc">INCREASE</button>
+
+            </div>
+            
+        </div>
+    </div>
+    <script>
+        var count=document.getElementById("count");
+        var desbtn=document.getElementById("des");
+        var resbtn=document.getElementById("res");
+        var incbtn=document.getElementById("inc");
+        function updateColor(){
+            let value=parseInt(count.textContent);
+            if(value < 0){
+                count.style.color="red"
+            }else if(value>0){
+                count.style.color="green"
+
+            }else{
+                count.style.color="black"
+
+            }
+       }
+        
+
+        
+        incbtn.addEventListener("click",() => {
+            count.textContent=parseInt(count.textContent)+1;
+            console.log(count.textContent);
+            updateColor();
+
+        });
+         desbtn.addEventListener("click", () => {
+            count.textContent = parseInt(count.textContent) - 1;
+            updateColor();
+        });
+
+        resbtn.addEventListener("click", () => {
+            count.textContent = 0;
+            updateColor();
+        });
+    </script>
+
+    
+</body>
+</html>
