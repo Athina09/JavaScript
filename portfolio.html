@@ -65,6 +65,62 @@
       display: inline-block;
       padding-bottom: 4px;
     }
+    .section {
+      margin-bottom: 2em;
+    }
+    .education-list, .cert-list, .skills-list, .lang-list, .blog-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .education-list li, .cert-list li, .skills-list li, .lang-list li {
+      margin-bottom: 0.7em;
+      font-size: 1.05rem;
+      color: #b0bec5;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .education-degree {
+      color: #4fc3f7;
+      font-weight: 600;
+      margin-right: 8px;
+    }
+    .education-inst {
+      color: #e0e6f7;
+      font-weight: 500;
+    }
+    .education-year {
+      color: #90caf9;
+      font-size: 0.98em;
+    }
+    .cert-list li::before {
+      content: '📜';
+      margin-right: 8px;
+    }
+    .skills-list li::before {
+      content: '✔️';
+      margin-right: 8px;
+    }
+    .lang-list li::before {
+      content: '🌐';
+      margin-right: 8px;
+    }
+    .blog-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2em;
+    }
+    .blog-title {
+      color: #4fc3f7;
+      font-weight: 600;
+      font-size: 1.08rem;
+      margin-bottom: 0.2em;
+    }
+    .blog-desc {
+      color: #b0bec5;
+      font-size: 1rem;
+    }
     .tech-stack {
       display: flex;
       flex-wrap: wrap;
@@ -178,6 +234,32 @@
     <div class="about">
       Hi! I'm Athina, a passionate full stack developer with a love for building modern, scalable web applications. I enjoy solving problems, learning new technologies, and collaborating with others to create impactful digital experiences.Exploring a bit of AI too. Let's build something amazing together!
     </div>
+    <div class="section">
+      <h2>Education</h2>
+      <ul class="education-list">
+        <li><span class="education-degree">B.E. in Computer Science</span> <span class="education-inst">CIT,Chennai</span> <span class="education-year">2025-2029</span></li>
+        <li><span class="education-degree">PCM(12 th grade)</span> <span class="education-inst">Edustar</span> <span class="education-year">2025</span></li>
+      </ul>
+    </div>
+    <div class="section">
+      <h2>Certifications</h2>
+      <ul class="cert-list">
+        <li>Code Galatta certification(C and C++)</li>
+        <li>Udemy Full-stack Certification</li>
+        <li>Python for Everybody (Cisco)</li>
+        <li>Azure Fundamentals</li>
+      </ul>
+    </div>
+    <div class="section">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>Problem Solving</li>
+        <li>Communication</li>
+        <li>Teamwork</li>
+        <li>Adaptability</li>
+        <li>Time Management</li>
+      </ul>
+    </div>
     <h2>Tech Stack</h2>
     <div class="tech-stack">
       <span class="tech">HTML5</span>
@@ -207,6 +289,18 @@
         <div class="project-desc">A Library Management System is a software application designed to help libraries keep track of books,users,administration</div>
         <div class="project-tech">c++</div>
       </div>
+    
+    
+    
+    </div>
+    <div class="section">
+      <h2>Languages</h2>
+      <ul class="lang-list">
+        <li>English</li>
+        <li>Hindi</li>
+        <li>Telugu</li>
+        <li>Tamil</li>
+      </ul>
     </div>
     <div class="contact">
       <h2>Contact</h2>
